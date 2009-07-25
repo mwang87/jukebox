@@ -1,0 +1,13 @@
+<p>
+  <b>Tag:</b>
+  <%=h @tags_songs.tag %>
+</p>
+
+<p>
+  <b>Song:</b>
+  <%=h @tags_songs.song %>
+</p>
+
+
+<%= link_to 'Edit', edit_tags_songs_path(@tags_songs) %> |
+<%= link_to 'Back', tags_songs_path %>

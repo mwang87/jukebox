@@ -1,0 +1,22 @@
+<h1>Listing tags_songs</h1>
+
+<table>
+  <tr>
+    <th>Tag</th>
+    <th>Song</th>
+  </tr>
+
+<% for tags_songs in @tags_songs %>
+  <tr>
+    <td><%=h tags_songs.tag %></td>
+    <td><%=h tags_songs.song %></td>
+    <td><%= link_to 'Show', tags_songs %></td>
+    <td><%= link_to 'Edit', edit_tags_songs_path(tags_songs) %></td>
+    <td><%= link_to 'Destroy', tags_songs, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tags_songs', new_tags_songs_path %>
