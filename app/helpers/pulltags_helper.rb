@@ -1,0 +1,2 @@
+module PulltagsHelper
+end

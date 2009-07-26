@@ -1,7 +1,5 @@
-<h1> Jukebox </h1>
-
 <% @tags.each do |tag|%>
-<%= tag.name %>
+<%= tag["name"] %>
 <%= "<br>" %>
 <%end%>
-<br>
+

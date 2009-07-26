@@ -3,13 +3,13 @@ before_filter :login_required
 require 'rubygems'
 require 'httparty'
 require 'json'
-#require 'gingerhendrix-scrobbler2'
   def index
-	response = getTopTags
-	@tags = JSON.parse(response.body)["toptags"]["tag"]
+#	response = JukeboxController.getTopTags
+#	@tags = JSON.parse(response.body)["toptags"]["tag"]
+	@tags = Tag.find(:all)
   end
 
-  def getTopTags
+  def JukeboxController.getTopTags
       api_key = "02e45d64712a174bf95fc76b4b9b67dc"	
       method = "tag.getTopTags"
       query = {}
