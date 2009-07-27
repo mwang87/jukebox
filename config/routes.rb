@@ -44,6 +44,7 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   map.root :controller => "jukebox"
   map.connect '/pulltags', :controller => "pulltags"
+  map.connect '/song/lookup', :controller => "songlookup"
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end

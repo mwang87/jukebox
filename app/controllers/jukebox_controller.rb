@@ -14,8 +14,19 @@ require 'json'
       method = "tag.getTopTags"
       query = {}
       options = {}
-       query = query.merge({:api_key => api_key, :method => method, :format => "json"})
+      query = query.merge({:api_key => api_key, :method => method, :format => "json"})
       options = options.merge({:query => query})
       response = HTTParty.get('http://ws.audioscrobbler.com/2.0/', options)
   end
+
+  def JukeboxController.getTrackInfo(artist, title)
+      api_key = "02e45d64712a174bf95fc76b4b9b67dc"
+      method = "track.getinfo"
+      query = {}
+      options = {}
+      query = query.merge({:api_key => api_key, :artist => artist, :track => title ,:method => method, :format => "json"})
+      options = options.merge({:query => query})
+      response = HTTParty.get('http://ws.audioscrobbler.com/2.0/', options)
+  end
+
 end

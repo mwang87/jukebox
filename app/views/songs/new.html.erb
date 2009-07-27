@@ -1,5 +1,27 @@
 <h1>New song</h1>
 
+<%= javascript_include_tag 'prototype' %>
+
+<!--%= link_to_remote "stuff", :url => "/", :action => "index", :update => "ming"%-->
+
+<div>
+<!--%=# link_to_remote "lookupsongs index", :url => "/song/lookup", :action => "index", :update => "ming"%-->
+</div>
+
+<% form_remote_for :song, @song, :url => "/song/lookup", :update => "ming" do |f| %>
+<%= f.label :name %><br>
+<%= f.text_field :name %>
+<br> 
+<%= f.label :artist%><br>
+<%= f.text_field :artist%>
+<%= submit_tag "Create" %> 
+<% end %> 
+
+
+
+<div id="ming">
+</div>
+
 <% form_for(@song) do |f| %>
   <%= f.error_messages %>
 

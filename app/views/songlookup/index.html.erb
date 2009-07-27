@@ -1,0 +1,10 @@
+Song:
+<%=h @song.name %>
+<br>
+Artist:
+<%=h @song.artist %>
+<br>
+Tags:
+<% @tags.each do |tag| %>
+<%=h tag["name"]%>,
+<% end %>
